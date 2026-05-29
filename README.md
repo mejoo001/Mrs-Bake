@@ -37,7 +37,7 @@ Functionality:
 
 Site Map:
 
-![SiteMap](images/SiteMap.jpg)
+![SiteMap](images/SiteMap.png)
 
 
 References:
