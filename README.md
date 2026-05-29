@@ -74,7 +74,7 @@ Available at:https://businessplannerhq.com/mission-and-vision-statements-for-bak
 <main>
     <h2>Welcome!</h2>
     <p>Freshly baked scones, cupcakes, jam tarts and more. Made with love at home.</p>
-    <img class="images-logo" src="images/MRS BAKE.png" alt="Logo">
+    <img width="500" height="500" alt="MRS BAKE" src="https://github.com/user-attachments/assets/7bf6e2b6-f61f-4d13-899f-fe58009a34a6" />
     <h3>Our Specialties</h3>
     <ul>
         <li>Scones</li>
