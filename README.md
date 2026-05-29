@@ -1,3 +1,50 @@
+# Website
+
+Project Title
+
+POE - PART 2 WEDE5020w
+
+
+
+Student information: 
+
+Name: Olive Masechaba Zwane
+Student Number: ST10498481
+
+Website Goals and Objectives:
+
+● Customer Engagement
+● Creating an online presence for easy navigation.
+● To increase product range and consistency.
+● Brand Identity 
+● Social Media intergration
+● Drive Safeles
+
+Key Features and Fuctionality:
+
+Essential Pages:
+● Homepage
+● About Us
+● Products
+● Enquiry    
+● Contact Page
+
+Functionality:
+● Online enquiry form
+● Mobile-friendly design
+● Shopping selection 
+● Mobile Responsiveness
+
+Site Map:
+
+![SiteMap](images/SiteMap.jpg)
+
+
+References:
+
+The mission statement on the about.html file line 24-25 - 
+Available at:https://businessplannerhq.com/mission-and-vision-statements-for-bakery/
+
 <!DOCTYPE html>
 <html>
 <head>
