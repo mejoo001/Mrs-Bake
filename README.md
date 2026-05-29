@@ -37,7 +37,7 @@ Functionality:
 
 Site Map:
 
-![SiteMap](images/SiteMap.png)
+<img width="750" height="563" alt="SiteMap" src="https://github.com/user-attachments/assets/76844747-1d75-4440-8d30-69c84fb37eeb" />
 
 
 References:
