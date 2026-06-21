@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact</title>
+    <title>Contact | Mrs Bake Home Bakery</title>
+    <meta name="description" content="Get in touch with Mrs Bake Home Bakery for orders, enquiries, or feedback.">
+    <meta name="keywords" content="bakery contact, Mrs Bake, Johannesburg bakery contact">
+
+    <!-- Link to your existing stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,14 +22,33 @@
 </header>
 
 <main>
-    <h2>Get in Touch</h2>
-    <p>Email: info@mrsbakehomebakery.com</p>
-    <p>Phone: 071 058 4985</p>
-    <p>Location: Brammfischerville Soweto, Johannesburg</p>
+    <h2>We would love to hear from you </h2>
+    <p>Reach out to us directly using the details below, or send us a message through the enquiry form.</p>
+
+    <h3>Contact Details</h3>
+    <p><strong>Phone:</strong> <a href="tel:071 058 4985">071 058 4985</a></p>
+    <p><strong>Email:</strong> info@mrsbake.co.za</p>
+    <p><strong>Address:</strong> 123 Bakery Street, Johannesburg</p>
+
+    <h3>Send Us a Message</h3>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
 </main>
+
 <footer>
-    <p>&copy; est 2023 Mrs Bake Home Bakery</p>
+    <p>&copy; 2023 Mrs Bake Home Bakery</p>
 </footer>
 
 </body>
 </html>
+
