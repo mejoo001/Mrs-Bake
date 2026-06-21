@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry</title>
+    <title>Enquiry | Contact Mrs Bake Home Bakery</title>
+    <meta name="description" content="Have a question or want to place an order? Fill out our enquiry form to reach Mrs Bake Home Bakery and we’ll get back to you promptly.">
+    <meta name="keywords" content="bakery enquiry, order form, contact bakery, Johannesburg bakery enquiries">
+
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 4px;
+        }
+        input.error-border, textarea.error-border, select.error-border {
+            border: 2px solid red;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,32 +33,123 @@
 <main>
     <h2>Place an Order or Ask a Question</h2>
 
-    <form>
-        <label>Name:</label><br>
-        <input type="text" required><br><br>
+    <form id="enquiryForm" novalidate>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" required>
+        <div id="nameError" class="error"></div><br>
 
-        <label>Email:</label><br>
-        <input type="email" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" required>
+        <div id="emailError" class="error"></div><br>
 
-        <label>Select Product:</label><br>
-        <select>
+        <label for="product">Select Product:</label><br>
+        <select id="product" required>
+            <option value="">-- Please choose --</option>
             <option>Scones</option>
             <option>Jam Tarts</option>
-            <option>Melting Moments</option>
-            <option>Queens Cakes</option>
             <option>Cupcakes</option>
-        </select><br><br>
+            <option>Queens Cakes</option>
+            <option>Melting Moments</option>
+        </select>
+        <div id="productError" class="error"></div><br>
 
-        <label>Message:</label><br>
-        <textarea rows="4"></textarea><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" rows="4" required></textarea>
+        <div id="messageError" class="error"></div><br>
 
         <button type="submit">Submit</button>
     </form>
 </main>
 
 <footer>
-    <p>&copy; est 2023 Mrs Bake Home Bakery</p>
+    <p>&copy; 2023 Mrs Bake Home Bakery</p>
 </footer>
+
+<script>
+    const form = document.getElementById('enquiryForm');
+
+    // Helper function to show error
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorDiv = document.getElementById(fieldId + 'Error');
+        field.classList.add('error-border');
+        errorDiv.textContent = message;
+    }
+
+    // Helper function to clear error
+    function clearError(fieldId) {
+        const field = document.getElementById(fieldId);
+        const errorDiv = document.getElementById(fieldId + 'Error');
+        field.classList.remove('error-border');
+        errorDiv.textContent = '';
+    }
+
+    // Validation rules
+    function validateName() {
+        const name = document.getElementById('name').value.trim();
+        if (name === '') {
+            showError('name', 'Name is required.');
+            return false;
+        }
+        clearError('name');
+        return true;
+    }
+
+    function validateEmail() {
+        const email = document.getElementById('email').value.trim();
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+        if (email === '') {
+            showError('email', 'Email is required.');
+            return false;
+        } else if (!emailPattern.test(email)) {
+            showError('email', 'Please enter a valid email address.');
+            return false;
+        }
+        clearError('email');
+        return true;
+    }
+
+    function validateProduct() {
+        const product = document.getElementById('product').value;
+        if (product === '') {
+            showError('product', 'Please select a product.');
+            return false;
+        }
+        clearError('product');
+        return true;
+    }
+
+    function validateMessage() {
+        const message = document.getElementById('message').value.trim();
+        if (message === '') {
+            showError('message', 'Message cannot be empty.');
+            return false;
+        }
+        clearError('message');
+        return true;
+    }
+
+    // Real-time validation listeners
+    document.getElementById('name').addEventListener('input', validateName);
+    document.getElementById('email').addEventListener('input', validateEmail);
+    document.getElementById('product').addEventListener('change', validateProduct);
+    document.getElementById('message').addEventListener('input', validateMessage);
+
+    // Submit validation
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const valid =
+            validateName() &
+            validateEmail() &
+            validateProduct() &
+            validateMessage();
+
+        if (valid) {
+            alert('Form submitted successfully!');
+            form.reset();
+        }
+    });
+</script>
 
 </body>
 </html>
