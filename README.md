@@ -2,7 +2,7 @@
 
 Project Title
 
-POE - PART 2 WEDE5020w
+POE - PART 3 WEDE5020w
 
 
 
@@ -34,6 +34,10 @@ Functionality:
 ● Mobile-friendly design
 ● Shopping selection 
 ● Mobile Responsiveness
+● Error Handling 
+● Client side validation
+● Updated the contact.html and enquiry.html file
+● Updated with SEO tags
 
 Site Map:
 
